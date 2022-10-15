@@ -1,36 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-
-const generateReadme = ({
-  projectTitle,
-  description,
-  tableOfContents,
-  installation,
-  usage,
-  license,
-  contributing,
-  tests,
-  userName,
-  userEmail,
-}) =>
-  `# ${projectTitle}
-  ## Table of Contents:
-  ## Description: 
-  ${description}
-  ## Installation: 
-  ${installation}
-  ## Usage:
-  ${usage}
-  ## License:
-  ${license}
-  ## Contributing:
-  ${contributing}
-  ## Tests:
-  ${tests}
-  ## Questions:
-  ${userName}
-  ${userEmail}
-  `;
+const generateReadme = require("./utils/generateMarkdown");
 
 inquirer
   .prompt([
@@ -68,7 +38,7 @@ inquirer
       type: "list",
       name: "license",
       message: "Which license is being used for this project?",
-      choices: ["MIT", "ANT", "THE", "LIC"],
+      choices: ["MIT", "IBM", "Apache"],
     },
     {
       type: "input",
@@ -85,6 +55,6 @@ inquirer
     const readMeContent = generateReadme(answers);
 
     fs.writeFile("README.md", readMeContent, (err) =>
-      err ? console.log(err) : console.log("Successfully created readme.md!")
+      err ? console.log(err) : console.log("Successfully created README.md!")
     );
   });
