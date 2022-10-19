@@ -63,7 +63,7 @@ const generateReadme = ({
   3. [Usage](#usage)
   4. [License](#license)
   5. [Contributing](#contributing)
-  6. [Test](#test)
+  6. [Test](#tests)
   7. [Questions](#questions)
   ## Description: 
   ${description}
