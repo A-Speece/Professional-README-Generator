@@ -41,3 +41,5 @@ no tests have been done for this at the moment
 
 GitHub Username: A-Speece
 Email: anthonyspeece@gmail.com
+Link to video walkthrough of readme:
+https://app.castify.com/view/a5c6cc5c-872a-4077-b454-6ff2ebedf094
